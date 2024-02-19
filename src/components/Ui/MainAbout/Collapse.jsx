@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Collapse = ({ title, children }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
@@ -11,7 +11,7 @@ const Collapse = ({ title, children }) => {
     <div className="collapse-container">
       <div className="collapse-header" onClick={toggleCollapse}>
         <h3>{title}</h3>
-        <span>{isCollapsed ? '+' : '-'}</span>
+        <span className={`chevron ${isCollapsed ? 'collapsed' : ''}`}>&#65088;</span>
       </div>
       {!isCollapsed && (
         <div className="collapse-content">
