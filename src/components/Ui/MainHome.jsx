@@ -1,55 +1,24 @@
-const img = require('../../assets/banner1.png')
+import { Link } from 'react-router-dom';
+
+import { locLists } from "../../datas/locLists";
+import Card from "../function/Card";
 
 const Main = () => {
+
+      const sixDatas = locLists.slice(0, 6);
+
       return (
             <>
-                  {/* <div avec une image et son titre */}
                   <div className="mainHome">
-                        <figure className="mainHome__figure">
-                              <div className="mainHome__figure__item">
-                                    <img
-                                          src={img}
-                                          alt="img : le produit sélectionné"
+                        {sixDatas.map((data) => (
+                              <Link key={data.id} to={`/detail/${data.id}`}>
+                                    <Card
+                                          title={data.title}
+                                          imageUrl={data.cover}
+                                          description={data.description}
                                     />
-                                    <figcaption>
-                                          <h1>Le titre</h1>
-                                    </figcaption>
-                              </div>
-                        </figure>
-
-                        <figure className="mainHome__figure">
-                              <div className="mainHome__figure__item">
-                                    <img
-                                          src={img}
-                                          alt="img : le produit sélectionné"
-                                    />
-                                    <figcaption>
-                                          <h1>Le titre</h1>
-                                    </figcaption>
-                              </div>
-                        </figure>
-                        <figure className="mainHome__figure">
-                              <div className="mainHome__figure__item">
-                                    <img
-                                          src={img}
-                                          alt="img : le produit sélectionné"
-                                    />
-                                    <figcaption>
-                                          <h1>Le titre</h1>
-                                    </figcaption>
-                              </div>
-                        </figure>
-                        <figure className="mainHome__figure">
-                              <div className="mainHome__figure__item">
-                                    <img
-                                          src={img}
-                                          alt="img : le produit sélectionné"
-                                    />
-                                    <figcaption>
-                                          <h1>Le titre</h1>
-                                    </figcaption>
-                              </div>
-                        </figure>
+                              </Link>
+                        ))}
                   </div>
             </>
       )

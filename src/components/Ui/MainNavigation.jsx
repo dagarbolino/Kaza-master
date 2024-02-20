@@ -1,8 +1,5 @@
 import { NavLink } from 'react-router-dom'
 
-
-
-
 import img from '../../assets/logo.png'
 
 const MainNavigation = () => {
@@ -22,7 +19,6 @@ const MainNavigation = () => {
                               </NavLink>
                         </div>
                   </nav>
-
 
             </>
       )

@@ -1,15 +1,13 @@
 import Banner from '../Ui/Banner'
-
-const image = "../../assets/banner1.png";
+import ImgBanner1 from '../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png'
 
 
 const HeroAbout = () => {
   return (
     <>
-      <div className="hero">
-
-        <Banner imageUrl={image} title="Titre Banner About" />
-      </div>
+      <Banner
+        imageUrl={ImgBanner1}
+      />
     </>
   )
 }

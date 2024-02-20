@@ -4,12 +4,16 @@ import Collapse from './Collapse'
 
 function MainAbout() {
   return (
-    <div>
+    <div className='aboutContainer'>
+
+
       <Collapse title="Fiabilité">
         <p>Les annonces postées sur Kasa garantissent une fiabilié totale.
           Les photos sont conformes aux logements,
           et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
       </Collapse>
+
+
       <Collapse title="Respect">
         <p>La bienveillance fait partie des valeurs fondadrices de Kasa.
           Tout comportement discriminatoire ou de perturbation du voisinage entraînera
