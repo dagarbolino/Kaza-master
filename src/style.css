@@ -4,6 +4,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100vh;
+  font-family: Helvetica, sans-serif;
 }
 
 #root {
@@ -445,7 +446,7 @@ button {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: #000;
+  color: #000000;
 }
 .detail-title .host {
   width: 167px;
@@ -590,7 +591,7 @@ button {
 }
 
 footer {
-  background: black;
+  background: #000000;
   width: auto;
   height: 209px;
   display: flex;
@@ -609,12 +610,12 @@ footer .__p {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: #f6f6f6;
 }
 footer .__p p {
   font-size: 12px;
   padding: 10px;
-  color: white;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

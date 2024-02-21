@@ -4,6 +4,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100vh;
+  font-family: $font-stack;
 }
 
 #root {
@@ -79,7 +80,7 @@ button {
   margin: 0.6rem 0;
 
   border-radius: 10px;
-  box-shadow: 0px 4px 4px 0px #00000040;
+  box-shadow: $shadowBanner;
 
   .banner-image {
     width: 100%;
@@ -146,7 +147,7 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: #f6f6f6;
+  background: $background-color;
   padding: 40px;
   border-radius: 10px;
 
@@ -161,7 +162,7 @@ button {
     margin: 0.6rem 0;
     background: $secondary-color;
     border-radius: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: $shadow1;
     cursor: pointer;
 
     .card-content {
@@ -299,7 +300,7 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: #f6f6f6;
+  background: $background-color;
   padding: 40px;
   border-radius: 10px;
 }
@@ -315,7 +316,7 @@ button {
   margin: 1rem;
   color: $primary-color;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: $shadow1;
   padding: 20px;
 
   img {
@@ -335,7 +336,7 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: #f6f6f6;
+  background: $background-color;
   padding: 0;
 
   border-radius: 10px;
@@ -482,7 +483,7 @@ button {
       margin: 0;
       padding: 0;
       font-weight: bold;
-      color: #000;
+      color: $tertiary-color;
     }
   }
   .host {
@@ -632,12 +633,12 @@ button {
   align-items: center;
 
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: $shadow1;
   padding: 20px;
 }
 
 footer {
-  background: black;
+  background: $tertiary-color;
   width: auto;
   height: 209px;
   display: flex;
@@ -657,11 +658,11 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: $background-color;
   }
   .__p p {
     font-size: 12px;
     padding: 10px;
-    color: white;
+    color: $primary-color;
   }
 }
