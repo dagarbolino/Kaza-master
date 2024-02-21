@@ -48,6 +48,7 @@ export default function DetailPage() {
         </div>
 
         <div className='blockCollapse'>
+
           <div className='descrip'>
             <Collapse title="Description">
               <p>{selectedData.description}</p>
