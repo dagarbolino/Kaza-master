@@ -47,7 +47,6 @@ button {
   text-decoration: none;
   color: #ff6060;
   border-bottom: 2px solid transparent;
-  transition: border-bottom 0.4s ease-in-out;
 }
 .navBar .__menu .__propos,
 .navBar .__menu .__acceuil {
@@ -127,7 +126,6 @@ button {
   margin-top: 40px;
   padding: 0;
   border-bottom: 2px solid #000000;
-  transition: border-bottom 0.4s ease-in-out;
 }
 
 .mainHome {
@@ -231,6 +229,11 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
+.collapse-header .arrow {
+  width: 40px;
+  height: 32px;
+  font-size: 2rem;
+}
 
 .collapse-content {
   width: 100%;
@@ -247,7 +250,6 @@ button {
   font-weight: bold;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 .collapse-content p {
   margin: 1rem;
@@ -256,17 +258,16 @@ button {
   text-align: justify;
 }
 
-.chevron {
-  width: 24px;
-  height: 13px;
-  font-size: 2rem;
+.arrow img {
+  width: 40px;
+  height: 30px;
   transition: transform 0.3s ease;
 }
 
-.chevron.collapsed {
-  width: 24px;
-  height: 13px;
-  transform: rotate(180deg);
+.arrow.collapsed img {
+  width: 40px;
+  height: 30px;
+  transform: rotate(-180deg);
 }
 
 .carrousel {
@@ -287,7 +288,7 @@ button {
   width: auto;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   margin: 1rem;
@@ -297,7 +298,6 @@ button {
 }
 .detailContainer img {
   width: 100%;
-  height: 415px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -322,19 +322,6 @@ button {
   border-radius: 25px;
   margin: 0 auto;
 }
-.carrousel .btnDetail {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50% -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 6.2rem;
-  color: #ffffff;
-  cursor: pointer;
-}
 .carrousel span {
   position: absolute;
   color: #ffffff;
@@ -343,14 +330,6 @@ button {
   line-height: 25px;
   bottom: 130px;
   left: 50%;
-}
-
-.previous {
-  left: 80px;
-}
-
-.next {
-  right: 80px;
 }
 
 .tag_rate {
@@ -389,18 +368,56 @@ button {
   font-size: 14px;
   font-weight: 700;
 }
-.tag_rate .fa-star {
+.tag_rate .star {
   width: 36px;
   height: 36px;
   font-size: 1.6rem;
+}
+.tag_rate .starG {
   color: #d3d3d3;
 }
-.tag_rate .filled-grey {
-  color: #ff6060;
+
+.btnDetail.next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.2rem;
+  color: #ffffff;
+  cursor: pointer;
+  right: 80px;
+}
+.btnDetail.next img {
+  width: 80px;
+  height: 80px;
+}
+
+.btnDetail.previous {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btnDetail.previous img {
+  width: 80px;
+  height: 80px;
 }
 
 .detail-title {
-  width: auto;
+  width: 100%;
+  max-width: 1240px;
   height: auto;
   min-height: 77px;
   display: flex;
@@ -459,7 +476,7 @@ button {
 }
 
 .blockCollapse {
-  width: auto;
+  width: 100%;
   max-width: 1240px;
   height: auto;
   display: flex;
@@ -470,7 +487,6 @@ button {
   color: #ffffff;
   flex-wrap: nowrap;
   gap: 60px;
-  transition: transform 1.3s ease;
 }
 
 .descrip {
@@ -500,7 +516,6 @@ button {
   align-items: center;
   color: #ffffff;
   background: #ff6060;
-  transition: transform 1.3s ease;
 }
 
 .collapse-header {
@@ -518,10 +533,9 @@ button {
   border-radius: 5px;
 }
 .collapse-header .chevron {
-  width: 32px;
+  width: auto;
   height: 32px;
   font-size: 2rem;
-  transition: transform 0.3s ease-in-out;
 }
 
 .collapse-content {
@@ -573,7 +587,6 @@ button {
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 20px;
-  transition: transform 2.3s ease;
 }
 
 footer {

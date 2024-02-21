@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+import star from '../../assets/star.png'
+import starG from '../../assets/starG.png'
+
+
 const Rating = ({ initialValue = 0, onChange }) => {
   const [rating, setRating] = useState(initialValue);
 
@@ -18,7 +22,11 @@ const Rating = ({ initialValue = 0, onChange }) => {
           className={starValue <= rating ? 'filled' : ''}
           onClick={() => handleRatingChange(starValue)}
         >
-          <i className={`fa-solid fa-star ${starValue <= rating ? 'filled-grey' : ''}`}></i>
+          <img
+            src={starValue <= rating ? star : starG}
+            alt="star"
+            className={`star ${starValue <= rating ? 'starG' : 'star'}`}
+          />
         </span>
       ))}
     </div>
@@ -26,3 +34,4 @@ const Rating = ({ initialValue = 0, onChange }) => {
 };
 
 export default Rating;
+

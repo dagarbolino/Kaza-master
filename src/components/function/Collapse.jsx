@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'; // Add prop-types import
+import arrow from '../../assets/arrowDown.png';
 
 const Collapse = ({ title, children }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -11,16 +13,23 @@ const Collapse = ({ title, children }) => {
     <div className="collapse-container">
       <div className="collapse-header" onClick={toggleCollapse}>
         <h3>{title}</h3>
-        <span className={`chevron ${isCollapsed ? 'collapsed' : ''}`}>&#65088;</span>
+        <span className={`arrow ${isCollapsed ? 'collapsed' : ''}`}>
+          <img src={arrow} alt="arrow" />
+        </span>
       </div>
       {!isCollapsed && (
-        <div className="collapse-content">
+        <div className="collapse-content arrow">
           {children}
         </div>
       )}
     </div>
   );
 };
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}; // Define prop types
 
 export default Collapse;
 

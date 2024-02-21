@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { locLists } from '../../datas/locLists';
+import previous from '../../assets/previous.png';
+import next from '../../assets/next.png';
+
+
 
 function Carrousel() {
   const { id } = useParams();
@@ -21,8 +25,12 @@ function Carrousel() {
   return (
     <div className='carrousel'>
       <img src={images[currentImage]} alt={`carrousel ${currentImage}`} />
-      <button className='btnDetail previous' onClick={previousImage}><i class="fa-solid fa-chevron-left"></i></button>
-      <button className='btnDetail next' onClick={nextImage}><i class="fa-solid fa-chevron-right"></i></button>
+      <button className='btnDetail previous' onClick={previousImage}>
+        <img src={previous} alt="previous" />
+      </button>
+      <button className='btnDetail next' onClick={nextImage}>
+        <img src={next} alt="next" />
+      </button>
       <span>{currentImage + 1}/{images.length}</span>
     </div>
   );
