@@ -1,27 +1,29 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { locLists } from '../datas/locLists';
+
 import Collapse from '../components/function/Collapse';
 import Ratting from '../components/function/Ratting';
 
 import Footer from '../components/Ui/Footer';
+import Carrousel from '../components/function/Carrousel';
 
 
 export default function DetailPage() {
 
   const { id } = useParams();
-
   const selectedData = locLists.find(data => data.id === id);
 
   if (!selectedData) {
     return <div>Carte introuvable</div>;
   }
+
   return (
     <>
 
       <div className="detailContainer">
 
-        <img src={selectedData.cover} alt={selectedData.title} />
+        <Carrousel />
 
         <div className="detail-title">
           <div className="title">
@@ -41,15 +43,9 @@ export default function DetailPage() {
               <button className='tag' key={index}>{tag}</button>
             ))}
 
-
-
           </div>
-
           <Ratting initialValue={selectedData.rating} />
-
-
         </div>
-
 
         <div className='blockCollapse'>
           <div className='descrip'>
