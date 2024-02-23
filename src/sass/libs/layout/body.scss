@@ -1,0 +1,17 @@
+body {
+  background: $primary-color;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: $font-stack;
+}
+
+#root {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}

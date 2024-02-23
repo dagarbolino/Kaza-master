@@ -1,0 +1,36 @@
+.error {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.6rem 0;
+  gap: 40px;
+
+  h1 {
+    font-size: 12rem;
+    font-weight: bold;
+    color: $secondary-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $secondary-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  .acceuil {
+    text-decoration: none;
+    color: $tertiary-color;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+    padding: 0;
+    border-bottom: 2px solid $tertiary-color;
+  }
+}
