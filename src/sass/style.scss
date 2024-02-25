@@ -4,16 +4,20 @@
 
 @import "libs/layout/body.scss";
 
-@import "libs/components/button";
-@import "libs/components/collapse";
-@import "libs/components/carrousel";
-@import "libs/components/ratting";
-@import "libs/components/mainAbout";
+@import "../Pages/detail/detail.scss";
 
-@import "libs/layout/navBar";
-@import "libs/layout/hero";
-@import "libs/layout/banner";
-@import "libs/layout/mainHome";
-@import "libs/layout/error";
-@import "libs/layout/footer";
-@import "libs/layout/detail";
+@import "../scenes/navBar/components/navBar.scss";
+
+@import "../scenes/home/components/main/mainHome.scss";
+@import "../scenes/home/components/banner/banner.scss";
+
+@import "../scenes/detail/components/buttonPrevNext/button.scss";
+@import "../scenes/detail/components/carrousel/carrousel.scss";
+@import "../scenes/detail/components/tagRate/ratting.scss";
+@import "../scenes/detail/components/title/titleDetail.scss";
+@import "../scenes/detail/components/blockCollapse/blockCollapse.scss";
+
+@import "../scenes/about/components/main/mainAbout.scss";
+
+@import "../scenes/footer/components/footer.scss";
+@import "../scenes/error/components/error.scss";

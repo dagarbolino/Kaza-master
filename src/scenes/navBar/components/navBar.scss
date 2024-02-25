@@ -1,0 +1,35 @@
+.navBar {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  color: $secondary-color;
+  height: 60px;
+  margin-bottom: 30px;
+
+  .__menu {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+      border-bottom: 2px solid transparent;
+    }
+
+    .__propos,
+    .__acceuil {
+      width: auto;
+      text-decoration: none;
+      color: $tertiary-color;
+      font-size: 24px;
+      margin: 20px;
+    }
+  }
+}

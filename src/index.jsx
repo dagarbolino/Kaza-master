@@ -2,11 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import App from './App'
-import About from './Pages/About.jsx'
-import Detail from './Pages/Detail.jsx'
-import Error from './Pages/Error.jsx'
-import Home from './Pages/Home.jsx'
+
+
+import Detail from './Pages/detail/Detail.jsx'
+import Home from './Pages/home/Home.jsx'
+import About from './Pages/about/About.jsx'
+import Error from './scenes/error/components/Error'
+
+
 import './index.css'
+
 import reportWebVitals from './reportWebVitals'
 
 

@@ -1,0 +1,68 @@
+.collapse-container {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: $primary-color;
+  background: $secondary-color;
+}
+
+.collapse-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: $secondary-color;
+  color: $primary-color;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+
+  .chevron {
+    width: auto;
+    height: 32px;
+    font-size: 2rem;
+  }
+}
+
+.blockCollapse {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: first baseline;
+
+  color: $primary-color;
+  flex-wrap: nowrap;
+
+  gap: 20px;
+}
+
+.descrip {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.equip {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+.detailMain {
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+  color: $primary-color;
+
+  box-shadow: $shadow1;
+
+
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+

@@ -1,0 +1,67 @@
+.btnDetail {
+  width: 100%;
+  max-width: 1240px;
+
+  position: absolute;
+
+  height: 50px;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.2rem;
+  color: $primary-color;
+
+  cursor: pointer;
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+.btnDetail.next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.2rem;
+  color: $primary-color;
+right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  right: 0px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.btnDetail.previous {
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.2rem;
+  color: $primary-color;
+left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
