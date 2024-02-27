@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Carrousel from '../../scenes/detail/components/carrousel/Carrousel';
 import Footer from '../../scenes/footer/components/Footer';
 

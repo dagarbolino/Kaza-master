@@ -32,9 +32,9 @@ function Carrousel() {
         <button className='btnDetail next' onClick={nextImage}>
           <img src={next} alt="next" />
         </button>
-<span>{currentImage + 1}/{images.length}</span>
+        <span>{currentImage + 1}/{images.length}</span>
       </div>
-      
+
 
     </div>
   );

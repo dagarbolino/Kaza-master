@@ -1,22 +1,19 @@
 .aboutContainer {
-  width: 100%;
-  max-width: 1240px;
+  width: 1240px;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: $primary-color;
-  gap: 10px;
-
-
-
+  gap: 30px;
+  margin: 30px 0;
 }
+
 .collapse-container {
-  width: 100%;
-  max-width: 1240px;
+  width: 1023px;
   height: auto;
+  min-height: 53px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,9 +22,7 @@
   border-radius: 10px;
   color: $primary-color;
   background: $secondary-color;
-
 }
-
 
 .collapse-header {
   width: 100%;
@@ -35,54 +30,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: $secondary-color;
   color: $primary-color;
-  font-size: 1.2rem;
-  font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
 
-  .chevron {
+  .arrow img {
     width: auto;
     height: 32px;
     font-size: 2rem;
+    margin-right: 15px;
+  }
+
+  h3 {
+    width: 956px;
+    height: 34px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-left: 15px;
   }
 }
 
 
-.collapse-header {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  background: $secondary-color;
-  color: $primary-color;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
 
-  .chevron {
-    width: auto;
-    height: 32px;
-    font-size: 2rem;
-  }
-}
 
 .collapse-content {
-
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-
   background: $grey-color;
   color: $tertiary-color;
   border-radius: 0 0 5px 5px;

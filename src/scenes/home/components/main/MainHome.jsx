@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import Card from "./components/card/Card";
 import { locLists } from "../../../../datas/locLists";
 
-const Main = () => {
+
+function Main() {
 
       const sixDatas = locLists.slice(0, 6);
 
@@ -21,7 +22,7 @@ const Main = () => {
                         ))}
                   </div>
             </>
-      )
+      );
 }
 
 export default Main

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Ratting from '../../../../components/function/ratting/Ratting.jsx';
 import { locLists } from '../../../../datas/locLists.js';
+
+import Ratting from '../../../../components/function/ratting/Ratting.jsx';
 
 
 function TagRate() {
@@ -15,19 +16,19 @@ function TagRate() {
 
 
   return (
-  
-      <div className="tag_rate">
-        <div className="tags">
 
-          {selectedData.tags.map((tag, index) => (
-            <button className='tag' key={index}>{tag}</button>
-          ))}
+    <div className="tag_rate">
+      <div className="tags">
 
-        </div>
-        <Ratting initialValue={selectedData.rating} />
+        {selectedData.tags.map((tag, index) => (
+          <button className='tag' key={index}>{tag}</button>
+        ))}
+
       </div>
+      <Ratting initialValue={selectedData.rating} />
+    </div>
 
- 
+
   )
 }
 

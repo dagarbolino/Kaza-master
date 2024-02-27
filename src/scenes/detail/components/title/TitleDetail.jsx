@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import { locLists } from '../../../../datas/locLists.js';
+import { locLists } from '../../../../datas/locLists';
+
 
 
 function TitleDetail() {
@@ -12,19 +13,19 @@ function TitleDetail() {
   }
 
   return (
-  
-      <div className="detail-title">
-        <div className="title">
-          <h2>{selectedData.title}</h2>
-          <p>{selectedData.location}</p>
-        </div>
-        <div className="host">
-          <p>{selectedData.host.name}</p>
-          <img src={selectedData.host.picture} alt={selectedData.host.name} />
-        </div>
-      </div>
 
- 
+    <div className="detail-title">
+      <div className="title">
+        <h2>{selectedData.title}</h2>
+        <p>{selectedData.location}</p>
+      </div>
+      <div className="host">
+        <p>{selectedData.host.name}</p>
+        <img src={selectedData.host.picture} alt={selectedData.host.name} />
+      </div>
+    </div>
+
+
   )
 }
 
