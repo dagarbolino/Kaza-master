@@ -17,15 +17,16 @@ function TagRate() {
 
   return (
 
-    <div className="tag_rate">
-      <div className="tags">
+    <div className="host_rate">
 
-        {selectedData.tags.map((tag, index) => (
-          <button className='tag' key={index}>{tag}</button>
-        ))}
-
+      <div className="host">
+        <p>{selectedData.host.name}</p>
+        <img src={selectedData.host.picture} alt={selectedData.host.name} />
       </div>
+
+
       <Ratting initialValue={selectedData.rating} />
+
     </div>
 
 

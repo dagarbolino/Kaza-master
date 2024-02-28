@@ -15,14 +15,20 @@ function TitleDetail() {
   return (
 
     <div className="detail-title">
+
       <div className="title">
         <h2>{selectedData.title}</h2>
         <p>{selectedData.location}</p>
       </div>
-      <div className="host">
-        <p>{selectedData.host.name}</p>
-        <img src={selectedData.host.picture} alt={selectedData.host.name} />
+
+      <div className="tags">
+        {selectedData.tags.map((tag, index) => (
+          <button className='tag' key={index}>{tag}</button>
+        ))}
       </div>
+
+
+
     </div>
 
 

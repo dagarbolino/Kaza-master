@@ -1,15 +1,18 @@
+
+
 body {
   background: $primary-color;
-  padding: 20px;
+  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+ 
+
   font-family: $font-stack;
   
 }
 
 #root {
-  width: auto;
-  height: auto;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

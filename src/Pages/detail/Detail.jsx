@@ -19,9 +19,10 @@ export default function DetailPage() {
 
         <Carrousel />
 
-        <TitleDetail />
-
-        <TagRate />
+        <div className="titleTags">
+          <TitleDetail />
+          <TagRate />
+        </div>
 
         <BlockCollapse />
 
