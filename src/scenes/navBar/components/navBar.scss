@@ -1,7 +1,8 @@
 .navBar {
+  width: 100%;
   max-width: 1240px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: $primary-color;
   color: $secondary-color;
