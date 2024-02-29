@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+    width: 375px;
   }
 
   .__logo img {
@@ -39,10 +40,10 @@
       height: auto;
     }
 
-    a {
+    a __acceuil .active {
       text-decoration: none;
-      color: $secondary-color;
-      border-bottom: 1px solid black;
+      color: black;
+      border-bottom: 2px solid rgb(0, 0, 0);
     }
 
     .__propos,
@@ -59,6 +60,12 @@
         font-weight: 500;
         margin: 0px;
         margin-left: 45px;
+      }
+
+      &.active {
+        text-decoration: none;
+        color: black;
+        border-bottom: 2px solid rgb(0, 0, 0);
       }
     }
   }

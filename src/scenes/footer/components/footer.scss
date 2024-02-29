@@ -1,7 +1,7 @@
 .footer {
   background: $tertiary-color;
   width: 100%;
-  max-width: 1240px;
+  max-width: 1440px;
   height: 209px;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,9 @@
   gap: 10px;
 
   @media screen and (max-width: 480px) {
+    width: 375px;
     height: 209px;
+    margin: 0;
   }
 
   .__logo {

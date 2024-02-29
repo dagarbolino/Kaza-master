@@ -8,18 +8,17 @@
   align-items: center;
   color: $primary-color;
   gap: 30px;
-  margin:  0 auto;
+  margin: 0 auto;
 
   @media screen and (max-width: 480px) {
     background: white;
-    width: 100%;
+    width: 375px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin: 30px 0;
   }
 
   .collapse-container {

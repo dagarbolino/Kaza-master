@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Footer from '../../footer/components/Footer'
 
 function Error() {
       return (
@@ -10,7 +11,10 @@ function Error() {
                         <NavLink to="/" className="acceuil">
                               Retourner sur la page d’accueil
                         </NavLink>
+
                   </div>
+
+                  <Footer />
             </>
       )
 }

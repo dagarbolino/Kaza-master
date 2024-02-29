@@ -11,10 +11,10 @@ const MainNavigation = () => {
                         </div>
 
                         <div className="__menu">
-                              <NavLink to="/" className="__acceuil">
+                              <NavLink exact to="/" className="__acceuil" activeClassName="__active">
                                     Accueil
                               </NavLink>
-                              <NavLink to="/about" className="__propos">
+                              <NavLink to="/about" className="__propos" activeClassName="__active">
                                     A Propos
                               </NavLink>
                         </div>

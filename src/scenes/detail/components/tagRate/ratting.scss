@@ -9,7 +9,7 @@
 
   @media screen and (max-width: 480px) {
     width: 100%;
-    height: auto;
+    height: 80px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -94,6 +94,7 @@
       font-weight: 500;
       font-size: 16px;
       text-align: right;
+      width: 90px;
 
       @media screen and (max-width: 480px) {
         font-size: 12px;
