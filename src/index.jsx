@@ -7,7 +7,7 @@ import App from './App'
 import Detail from './Pages/detail/Detail.jsx'
 import Home from './Pages/home/Home.jsx'
 import About from './Pages/about/About.jsx'
-import Error from './scenes/error/components/Error'
+import ErrorPage from '../src/components/function/hooks/errorUseNav.jsx'
 
 
 import './index.css'
@@ -24,7 +24,7 @@ root.render(
                         <Route path="/" element={<Home />} /> {/* <Home /> iPage de l'acceuil */}
                         <Route path="/about" element={<About />} /> {/* <About /> iPage de a propos */}
                         <Route path="/detail/:id" element={<Detail />} /> {/* <Detail /> iPage de detail */}
-                        <Route path="*" element={<Error />} />
+                        <Route path="*" element={<ErrorPage />} />
                   </Routes>
             </Router>
       </React.StrictMode>

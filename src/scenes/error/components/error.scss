@@ -43,7 +43,7 @@
     }
   }
 
-  .acceuil {
+  .returnAcceuil {
     text-decoration: none;
     color: $tertiary-color;
     font-size: 18px;
@@ -51,6 +51,7 @@
     margin-top: 40px;
     padding: 0;
     border-bottom: 2px solid $tertiary-color;
+    cursor: pointer;
 
     @media screen and (max-width: 480px) {
       font-size: 14px;

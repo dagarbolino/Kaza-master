@@ -1082,7 +1082,7 @@ button {
     font-family: Monstserrat;
   }
 }
-.error .acceuil {
+.error .returnAcceuil {
   text-decoration: none;
   color: #000000;
   font-size: 18px;
@@ -1090,9 +1090,10 @@ button {
   margin-top: 40px;
   padding: 0;
   border-bottom: 2px solid #000000;
+  cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-  .error .acceuil {
+  .error .returnAcceuil {
     font-size: 14px;
     font-weight: 500;
     line-height: 19px;
