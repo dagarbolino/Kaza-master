@@ -1,23 +1,33 @@
-import React from 'react'
-
-import Collapse from '../../../../components/function/collapse/CollapseFunction';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import { locLists } from '../../../../datas/locLists.js';
+import Collapse from '../../../../components/function/collapse/CollapseFunction';
+import { locLists } from '../../../../dataLoc/localeLists.js';
+import useFetchData from '../../../../datas/FetchData'; // Assurez-vous que le chemin d'accès est correct
+
 
 function BlockCollapse() {
-
   const { id } = useParams();
-  const selectedData = locLists.find(data => data.id === id);
+  const apiURL = `https://monapi.com/data/${id}`; // Remplacez par l'URL de l'API
 
+
+  // Utilise le Hook 
+  const data = useFetchData({ apiURL, localData: locLists });
+
+  // Si les données ne sont pas encore chargées, cela affiche un message de chargement
+  if (!data) {
+    return <div>Chargement en cours...</div>;
+  }
+
+
+  const selectedData = data.find(item => item.id === id);
+
+  // Si les données sélectionnées ne sont pas trouvées, cela affiche un message d'erreur
   if (!selectedData) {
-    return <div>Carte introuvable</div>;
+    return <div>Données introuvables</div>;
   }
 
   return (
-
-
     <div className='blockCollapse'>
-
       <div className='descrip'>
         <Collapse title="Description">
           <p>{selectedData.description}</p>
@@ -34,8 +44,7 @@ function BlockCollapse() {
         </Collapse>
       </div>
     </div>
-
-  )
+  );
 }
 
-export default BlockCollapse
+export default BlockCollapse;

@@ -1,19 +1,32 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { locLists } from '../../../../datas/locLists';
-
+import useFetchData from '../../../../datas/FetchData';
+import { locLists } from '../../../../dataLoc/localeLists.js';
 
 
 function TitleDetail() {
   const { id } = useParams();
-  const selectedData = locLists.find(data => data.id === id);
+  const apiURL = `https://monapi.com/data/${id}`; // Remplacez par l'URL de l'API
 
-  if (!selectedData) {
-    return <div>Carte introuvable</div>;
+
+  // Utilise le Hook 
+  const data = useFetchData({ apiURL, localData: locLists });
+
+  // Si les données ne sont pas encore chargées, cela affiche un message de chargement
+  if (!data) {
+    return <div>Chargement en cours...</div>;
   }
 
-  return (
 
+  const selectedData = data.find(item => item.id === id);
+
+  // Si les données sélectionnées ne sont pas trouvées, cela affiche un message d'erreur
+  if (!selectedData) {
+    return <div>Données introuvables</div>;
+  }
+
+
+  return (
     <div className="detail-title">
 
       <div className="title">

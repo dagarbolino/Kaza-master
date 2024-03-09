@@ -1,28 +1,31 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Card from "./components/card/Card";
-import { locLists } from "../../../../datas/locLists";
-
+import UseFetchData from '../../../../datas/FetchData'; 
+import { locLists } from '../../../../dataLoc/localeLists.js';
 
 function Main() {
+      const apiURL = '#'; // Remplacez par l'URL de l'API
 
-      const sixDatas = locLists.slice(0, 6);
+      const data = UseFetchData({ apiURL, localData: locLists });
+
+      if (!data) {
+            return <div>Chargement en cours...</div>;
+      }
 
       return (
-            <>
-                  <div className="mainHome">
-                        {sixDatas.map((data) => (
-                              <Link key={data.id} to={`/detail/${data.id}`}>
-                                    <Card
-                                          title={data.title}
-                                          imageUrl={data.cover}
-                                          description={data.description}
-                                    />
-                              </Link>
-                        ))}
-                  </div>
-            </>
+            <div className="mainHome">
+                  {data.map((item, index) => (
+                        <Link key={item.id} to={`/detail/${item.id}`}>
+                              <Card
+                                    title={item.title}
+                                    imageUrl={item.cover}
+                                    description={item.description}
+                              />
+                        </Link>
+                  ))}
+            </div>
       );
 }
 
-export default Main
+export default Main;
