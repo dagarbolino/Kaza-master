@@ -1,5 +1,5 @@
-import ImgBanner1 from '../../../../assets/images/banner1.png'
-import Banner from '../../../../components/function/banner/BannerFunction'
+import ImgBanner1 from '../../../../../../assets/images/banner1.png'
+import Banner from '../../../../../../components/function/banner/BannerFunction'
 
 
 const BannerHome = () => {

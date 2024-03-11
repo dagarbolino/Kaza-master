@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Collapse from '../../../../components/function/collapse/CollapseFunction';
-import { locLists } from '../../../../dataLoc/localeLists.js';
-import useFetchData from '../../../../datas/FetchData'; // Assurez-vous que le chemin d'accès est correct
+import Collapse from '../../../../../../components/function/collapse/CollapseFunction';
+import { locLists } from '../../../../../../dataLoc/localeLists.js';
+import useFetchData from '../../../../../../service/FetchData.jsx'; // Assurez-vous que le chemin d'accès est correct
 
 
 function BlockCollapse() {

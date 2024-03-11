@@ -1,5 +1,5 @@
 import React from 'react'
-import Collapse from '../../../../components/function/collapse/CollapseFunction'
+import Collapse from '../../../../../../components/function/collapse/CollapseFunction'
 
 
 function MainAbout() {

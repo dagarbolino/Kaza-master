@@ -27,15 +27,19 @@ body {
   width: 100%;
   max-width: 1440px;
   height: auto;
-  padding: 0 30px;
+
   border-radius: 10px;
   color: $primary-color;
   box-shadow: 0 0 10px 0 $primary-color;
 
   @media screen and (max-width: 480px) {
-    background: white;
     width: 375px;
-    justify-content: center;
-    margin: 0;
+    height: auto;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 $primary-color;
+    gap: 0;
   }
+
+
 }

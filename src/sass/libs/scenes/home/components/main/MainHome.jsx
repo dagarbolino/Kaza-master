@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { locLists } from '../../../../../../dataLoc/localeLists.js';
+import UseFetchData from '../../../../../../service/FetchData.jsx';
 import Card from "./components/card/Card";
-import UseFetchData from '../../../../datas/FetchData'; 
-import { locLists } from '../../../../dataLoc/localeLists.js';
 
 function Main() {
       const apiURL = '#'; // Remplacez par l'URL de l'API

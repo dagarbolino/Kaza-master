@@ -1,11 +1,17 @@
 import React from 'react';
 
-import Carrousel from '../../scenes/detail/components/carrousel/Carrousel';
-import Footer from '../../scenes/footer/components/Footer';
+import Carrousel from '../../sass/libs/scenes/detail/components/carrousel/Carrousel';
 
-import BlockCollapse from '../../scenes/detail/components/blockCollapse/BlockCollapse';
-import TagRate from '../../scenes/detail/components/tagRate/TagRate';
-import TitleDetail from '../../scenes/detail/components/title/TitleDetail';
+
+
+import Footer from '../../sass/libs/scenes/footer/components/Footer';
+
+import BlockCollapse from '../../sass/libs/scenes/detail/components/blockCollapse/BlockCollapse';
+import TagRate from '../../sass/libs/scenes/detail/components/tagRate/TagRate';
+
+
+import TitleDetail from '../../sass/libs/scenes/detail/components/title/TitleDetail';
+
 
 
 export default function DetailPage() {

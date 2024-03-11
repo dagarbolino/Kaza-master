@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import nextIcon from '../../../../assets/icons/next.png';
-import previousIcon from '../../../../assets/icons/previous.png';
-import { locLists } from '../../../../dataLoc/localeLists.js';
-import useFetchData from '../../../../datas/FetchData'; // Assurez-vous que le chemin d'accès est correct
+import nextIcon from '../../../../../../assets/icons/next.png';
+import previousIcon from '../../../../../../assets/icons/previous.png';
+import { locLists } from '../../../../../../dataLoc/localeLists.js';
+import useFetchData from '../../../../../../service/FetchData.jsx'; // Assurez-vous que le chemin d'accès est correct
 
 function Carrousel() {
 

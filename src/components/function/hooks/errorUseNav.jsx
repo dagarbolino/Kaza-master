@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../../scenes/footer/components/Footer';
+
+import Footer from '../../../sass/libs/scenes/footer/components/Footer';
+
 
 function ErrorPage() {
 

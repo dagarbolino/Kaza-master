@@ -10,7 +10,7 @@ import About from './Pages/about/About.jsx'
 import ErrorPage from '../src/components/function/hooks/errorUseNav.jsx'
 
 
-import './style.css'
+
 
 import reportWebVitals from './reportWebVitals'
 

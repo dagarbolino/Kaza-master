@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { locLists } from '../../../../dataLoc/localeLists.js';
-import useFetchData from '../../../../datas/FetchData';
+import { locLists } from '../../../../../../dataLoc/localeLists.js';
+import useFetchData from '../../../../../../service/FetchData.jsx';
 
-import Ratting from '../../../../components/function/ratting/Ratting.jsx';
+import Ratting from '../../../../../../components/function/ratting/Ratting.jsx';
 
 
 function TagRate() {

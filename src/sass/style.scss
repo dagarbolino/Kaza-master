@@ -4,21 +4,21 @@
 
 @import "libs/layout/body.scss";
 
-@import "../scenes/navBar/components/navBar.scss";
+@import "libs/scenes/navBar/components/navBar.scss";
 
-@import "../scenes/home/components/main/mainHome.scss";
-@import "../scenes/home/components/banner/banner.scss";
+@import "libs/scenes/home/components/main/mainHome.scss";
+@import "libs/scenes/home/components/banner/banner.scss";
 
-@import "../scenes/detail/components/buttonPrevNext/button.scss";
-@import "../scenes/detail/components/carrousel/carrousel.scss";
-@import "../scenes/detail/components/tagRate/ratting.scss";
-@import "../scenes/detail/components/title/titleDetail.scss";
-@import "../scenes/detail/components/blockCollapse/blockCollapse.scss";
-@import "../scenes/detail/components/main/detail.scss";
-
-
+@import "libs/scenes/detail/components/buttonPrevNext/button.scss";
+@import "libs/scenes/detail/components/carrousel/carrousel.scss";
+@import "libs/scenes/detail/components/tagRate/ratting.scss";
+@import "libs/scenes/detail/components/title/titleDetail.scss";
+@import "libs/scenes/detail/components/blockCollapse/blockCollapse.scss";
+@import "libs/scenes/detail/components/main/detail.scss";
 
 
-@import "../scenes/about/components/main/mainAbout.scss";
-@import "../scenes/footer/components/footer.scss";
-@import "../scenes/error/components/error.scss";
+
+
+@import "libs/scenes/about/components/main/mainAbout.scss";
+@import "libs/scenes/footer/components/footer.scss";
+@import "libs/scenes/error/components/error.scss";

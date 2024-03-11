@@ -1,0 +1,45 @@
+.footer {
+  background: $tertiary-color;
+  width: 100%;
+  max-width: 1440px;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  color: $primary-color;
+  gap: 40px;
+
+  @media (max-width: 480px) {
+    width: 335px;
+    height: 209px;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .__p {
+    height: 46px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $background-color;
+  }
+
+  p {
+    height: 46px;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+
+    @media (max-width: 480px) {
+      width: 95px;
+      height: 46px;
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}
+
+
+
