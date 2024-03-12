@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
+//import { locLists } from '../../../../../../../public/data.js';
 import { locLists } from '../../../../../../dataLoc/localeLists.js';
 import UseFetchData from '../../../../../../service/FetchData.jsx';
 import Card from "./components/card/Card";
+
+
+
 
 function Main() {
       const apiURL = '#'; // Remplacez par l'URL de l'API
@@ -14,17 +18,21 @@ function Main() {
       }
 
       return (
-            <div className="mainHome">
-                  {data.map((item, index) => (
-                        <Link key={item.id} to={`/detail/${item.id}`}>
-                              <Card
-                                    title={item.title}
-                                    imageUrl={item.cover}
-                                    description={item.description}
-                              />
-                        </Link>
-                  ))}
-            </div>
+                  <div className="mainHome">
+                        {data.map((item) => (
+                              <Link key={item.id} to={`/detail/${item.id}`}>
+                                    <Card
+                                          title={item.title}
+                                          imageUrl={item.cover}
+                                          description={item.description}
+                                    />
+                              </Link>
+                        ))}
+
+                  </div>
+
+
+
       );
 }
 

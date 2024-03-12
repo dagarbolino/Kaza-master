@@ -1,33 +1,70 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import App from './App'
 
 
-import Detail from './Pages/detail/Detail.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import './style.css'
+
+
 import Home from './Pages/home/Home.jsx'
+import DetailPage from './Pages/detail/DetailPage.jsx'
 import About from './Pages/about/About.jsx'
-import ErrorPage from '../src/components/function/hooks/errorUseNav.jsx'
+import NotFoundPage from './Pages/NotFoundPage.jsx'
+
+import ProfilesPage from './Pages/ProfilesPage.jsx'
+import ProfilePage from './Pages/ProfilePage.jsx'
 
 
 
 
-import reportWebVitals from './reportWebVitals'
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
+
+const router = createBrowserRouter([
+
+
+
+      {
+            path: '/',
+            element: <Home />,
+            errorElement: <NotFoundPage />,
+      },
+      {
+            path: '/detail/:id',
+            element: <DetailPage />,
+            errorElement: <NotFoundPage />,
+      },
+
+
+      {
+            path: '/profiles',
+            element: <ProfilesPage />,
+      },
+
+      {
+            path: '/profile/:id',
+            element: <ProfilePage />,
+            errorElement: <NotFoundPage />,
+
+      },
+
+      {
+            path: '/about',
+            element: <About />,
+            errorElement: <NotFoundPage />,
+      },
+
+]);
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
       <React.StrictMode>
-            <Router>
-                  <App /> {/* <App /> iPage de l'application */}
-                  <Routes>
-                        <Route path="/" element={<Home />} /> {/* <Home /> iPage de l'acceuil */}
-                        <Route path="/about" element={<About />} /> {/* <About /> iPage de a propos */}
-                        <Route path="/detail/:id" element={<Detail />} /> {/* <Detail /> iPage de detail */}
-                        <Route path="*" element={<ErrorPage />} />
-                  </Routes>
-            </Router>
+            <RouterProvider router={router} />
       </React.StrictMode>
+
 )
 
-reportWebVitals()
+
+
+

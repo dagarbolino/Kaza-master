@@ -1,6 +1,10 @@
 import React from 'react'
-import NavBar from './scenes/navBar/components/NavBar'
+import NavBar from './sass/libs/scenes/navBar/components/NavBar'
+
+
 import './style.css'
+
+
 
 function App() {
 
@@ -8,3 +12,11 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
