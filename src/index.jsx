@@ -1,29 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import './style.css'
+
+import './sass/style.css'
 
 
-import Home from './Pages/home/Home.jsx'
-import DetailPage from './Pages/detail/DetailPage.jsx'
-import About from './Pages/about/About.jsx'
-import NotFoundPage from './Pages/NotFoundPage.jsx'
-
-import ProfilesPage from './Pages/ProfilesPage.jsx'
-import ProfilePage from './Pages/ProfilePage.jsx'
-
-
-
-
+import Home from './pages/home/Home.jsx'
+import DetailPage from './pages/detail/Detail.jsx'
+import About from './pages/about/About.jsx'
+import NotFoundPage from './pages/error/NotFoundPage.jsx'
 
 
 
 const router = createBrowserRouter([
-
-
 
       {
             path: '/',
@@ -35,20 +25,6 @@ const router = createBrowserRouter([
             element: <DetailPage />,
             errorElement: <NotFoundPage />,
       },
-
-
-      {
-            path: '/profiles',
-            element: <ProfilesPage />,
-      },
-
-      {
-            path: '/profile/:id',
-            element: <ProfilePage />,
-            errorElement: <NotFoundPage />,
-
-      },
-
       {
             path: '/about',
             element: <About />,
