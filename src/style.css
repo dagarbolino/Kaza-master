@@ -28,6 +28,14 @@ body {
   color: #ffffff;
   box-shadow: 0 0 10px 0 #ffffff;
 }
+@media screen and (max-width: 480px) {
+  #root {
+    width: 375px;
+    height: auto;
+    padding: 0 10px;
+    gap: 0;
+  }
+}
 
 .navBar {
   width: 100%;
@@ -230,6 +238,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 34px;
+    margin-right: 50px;
   }
 }
 
