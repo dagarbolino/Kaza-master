@@ -1,25 +1,14 @@
-
 import React from 'react';
-import { Outlet } from 'react-router-dom';
-
-
 
 import NavBar from '../../components/navBar/NavBar';
-
-
 import Carrousel from '../../components/detail/carrousel/Carrousel';
-
 import TitleDetail from '../../components/detail/title/TitleDetail';
 import TagRate from '../../components/detail/tagRate/TagRate';
 import BlockCollapse from '../../components/detail/blockCollapse/BlockCollapse';
 import Footer from '../../components/footer/Footer';
 
 
-export default function DetailPage() {
-
-
-
-
+export default function DetailPage(props) {
 
   return (
     <>
@@ -35,12 +24,12 @@ export default function DetailPage() {
             <TitleDetail />
             <TagRate />
           </div>
-          <BlockCollapse />
+          <BlockCollapse match={props.match} />
         </div>
         <Footer />
 
 </div>
-<Outlet />
+
 </div>
     </>
   )

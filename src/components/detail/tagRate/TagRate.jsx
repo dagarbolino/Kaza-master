@@ -1,28 +1,30 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-import { locLists } from '../../../dataLoc/localeLists.js';
-import useFetchData from '../../../service/FetchData.jsx';
+
 import Ratting from './Ratting.jsx';
 
 
 function TagRate() {
-
+  const [data, setData] = useState(null);
   const { id } = useParams();
-  const apiURL = `https://monapi.com/data/${id}`; // Remplacez par l'URL de l'API
+  const apiURL = process.env.PUBLIC_URL + '/data.json';
 
-  const data = useFetchData({ apiURL, localData: locLists });
+  useEffect(() => {
+    fetch(apiURL)
+      .then((response) => response.json())
+      .then((json) => {
+        const item = json.find((item) => item.id === id);
+        setData(item);
+      })
+      .catch((error) => {
+        console.error('Erreur lors de la récupération des données:', error);
+      });
+  }, [apiURL, id]);
 
-  // Si les données ne sont pas encore chargées, cela affiche un message de chargement
   if (!data) {
     return <div>Chargement en cours...</div>;
-  }
-
-  const selectedData = data.find(item => item.id === id);
-
-  // Si les données sélectionnées ne sont pas trouvées, cela affiche un message d'erreur
-  if (!selectedData) {
-    return <div>Données introuvables</div>;
   }
 
 
@@ -31,10 +33,10 @@ function TagRate() {
     <div className="host_rate">
 
       <div className="host">
-        <p>{selectedData.host.name}</p>
-        <img src={selectedData.host.picture} alt={selectedData.host.name} />
+        <p>{data.host.name}</p>
+        <img src={data.host.picture} alt={data.host.name} />
       </div>
-      <Ratting initialValue={selectedData.rating} />
+      <Ratting initialValue={data.rating} />
     </div>
 
 

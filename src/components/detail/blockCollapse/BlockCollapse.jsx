@@ -1,43 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import Collapse from '../../../utils/collapse/CollapseFunction.jsx';
-import { locLists } from '../../../dataLoc/localeLists.js';
-import useFetchData from '../../../service/FetchData.jsx'; // Assurez-vous que le chemin d'accès est correct
 
 
 function BlockCollapse() {
+  const [data, setData] = useState(null);
   const { id } = useParams();
-  const apiURL = `https://monapi.com/data/${id}`; // Remplacez par l'URL de l'API
+  const apiURL = process.env.PUBLIC_URL + '/data.json';
 
+  useEffect(() => {
+    fetch(apiURL)
+      .then((response) => response.json())
+      .then((json) => {
+        const item = json.find((item) => item.id === id);
+        setData(item);
+      })
+      .catch((error) => {
+        console.error('Erreur lors de la récupération des données:', error);
+      });
+  }, [apiURL, id]);
 
-  // Utilise le Hook 
-  const data = useFetchData({ apiURL, localData: locLists });
-
-  // Si les données ne sont pas encore chargées, cela affiche un message de chargement
   if (!data) {
     return <div>Chargement en cours...</div>;
-  }
-
-
-  const selectedData = data.find(item => item.id === id);
-
-  // Si les données sélectionnées ne sont pas trouvées, cela affiche un message d'erreur
-  if (!selectedData) {
-    return <div>Données introuvables</div>;
   }
 
   return (
     <div className='blockCollapse'>
       <div className='descrip'>
         <Collapse title="Description">
-          <p>{selectedData.description}</p>
+          <p>{data.description}</p>
         </Collapse>
       </div>
-
       <div className='equip'>
         <Collapse title="Equipements">
           <ul>
-            {selectedData.equipments.map((equip, index) => (
+            {data.equipments.map((equip, index) => (
               <li key={index}>{equip}</li>
             ))}
           </ul>
@@ -46,5 +44,4 @@ function BlockCollapse() {
     </div>
   );
 }
-
 export default BlockCollapse;
