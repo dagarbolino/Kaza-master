@@ -1,46 +1,51 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import './style.css';
+
+import Home from './pages/home/Home.jsx';
+import DetailPage from './pages/detail/Detail.jsx';
+import About from './pages/about/About.jsx';
+import NotFoundPage from './pages/error/NotFoundPage.jsx';
 
 
-import './style.css'
 
-
-import Home from './pages/home/Home.jsx'
-import DetailPage from './pages/detail/Detail.jsx'
-import About from './pages/about/About.jsx'
-import NotFoundPage from './pages/error/NotFoundPage.jsx'
+import { DataContext } from './components/home/main/MainHome.jsx'; 
 
 
 
 const router = createBrowserRouter([
-
       {
             path: '/',
             element: <Home />,
             errorElement: <NotFoundPage />,
       },
+
+
       {
             path: '/detail/:id',
-            element: <DetailPage />,
+            element: (props) => (
+                  <DataContext.Consumer>
+                        {data => <DetailPage {...props} data={data} />}
+                  </DataContext.Consumer>
+            ),
             errorElement: <NotFoundPage />,
       },
+
+
+
       {
             path: '/about',
             element: <About />,
             errorElement: <NotFoundPage />,
       },
-
 ]);
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
       <React.StrictMode>
             <RouterProvider router={router} />
       </React.StrictMode>
-
-)
-
-
-
-
+);
