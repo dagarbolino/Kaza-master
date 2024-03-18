@@ -11,7 +11,7 @@ import NotFoundPage from './pages/error/NotFoundPage.jsx';
 
 
 
-import { DataContext } from './components/home/main/MainHome.jsx'; 
+
 
 
 
@@ -25,11 +25,7 @@ const router = createBrowserRouter([
 
       {
             path: '/detail/:id',
-            element: (props) => (
-                  <DataContext.Consumer>
-                        {data => <DetailPage {...props} data={data} />}
-                  </DataContext.Consumer>
-            ),
+            element: <DetailPage />,
             errorElement: <NotFoundPage />,
       },
 

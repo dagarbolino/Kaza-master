@@ -13,6 +13,7 @@ class Main extends React.Component {
             return (
                   <div className="mainHome">
                         <FetchData render={(data) => (
+                              
                               <DataContext.Provider value={data}>
                                     {data.map((item) => (
                                           <Link key={item.id} to={`/detail/${item.id}`}>
@@ -29,6 +30,7 @@ class Main extends React.Component {
             );
       }
 }
+
 
 
 export default Main;

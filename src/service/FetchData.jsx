@@ -1,6 +1,7 @@
 import React from 'react';
 
 class FetchData extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -15,28 +16,25 @@ class FetchData extends React.Component {
       const apiURL = process.env.PUBLIC_URL + '/data.json';
       const response = await fetch(apiURL);
       const json = await response.json();
+
       this.setState({ data: json, isLoading: false });
-    } catch (error) {
-      console.error('Error fetching data:', error);
+    } 
+    catch (error) {
       this.setState({ error: error, isLoading: false });
     }
   }
 
-
-    render() {
-      const { data, isLoading, error } = this.state;
-  
-      if (isLoading) {
-        return <div>Chargement en cours...</div>;
-      }
-  
-      if (error) {
-        return <div>Une erreur s'est produite lors du chargement des données.</div>;
-      }
-  
-      return this.props.render(data);
+  render() {
+    const { data, isLoading, error } = this.state;
+    if (isLoading) {
+      return <div>Chargement en cours...</div>;
     }
+    if (error) {
+      return <div>Une erreur s'est produite lors du chargement des données.</div>;
+    }
+    return this.props.render(data);
   }
-  
-  export default FetchData;
-  
+}
+
+export default FetchData;
+
