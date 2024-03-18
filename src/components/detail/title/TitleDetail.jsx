@@ -17,4 +17,6 @@ function TitleDetail({ data }) {
 }
 
 
+
+
 export default TitleDetail;

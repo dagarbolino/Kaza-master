@@ -8,8 +8,16 @@
   align-items: start;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   gap: 10px;
+  width: 100%;
+
+  @media screen and (max-width: 480px)
+  {
+    width: auto;
+    padding: 0;
+  }
+
 
   .title {
     display: flex;
@@ -17,6 +25,7 @@
     margin: 0;
     padding: 0;
     gap: 10px;
+    
 
     @media screen and (max-width: 480px) {
       display: flex;
@@ -26,6 +35,7 @@
       flex-wrap: wrap;
       gap: 0;
       height: 70px;
+      padding: 0;
     }
 
     h2 {

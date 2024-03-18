@@ -6,8 +6,8 @@ import Collapse from "../../../utils/collapse/CollapseFunction.jsx";
 
 function BlockCollapse({ data }) {
     return (
-        <div>
-            <div key={data.id}>
+    
+            <div className='blockCollapse' key={data.id}>
                 <div className='descrip'>
                     <Collapse title="Description">
                         <p>{data.description}</p>
@@ -23,8 +23,8 @@ function BlockCollapse({ data }) {
                     </Collapse>
                 </div>
             </div>
-            
-        </div>
+
+      
     );
 }
 
