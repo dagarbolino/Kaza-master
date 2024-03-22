@@ -11,30 +11,20 @@ import NotFoundPage from './pages/error/NotFoundPage.jsx';
 
 
 
-
-
-
-
 const router = createBrowserRouter([
+
       {
             path: '/',
             element: <Home />,
             errorElement: <NotFoundPage />,
       },
-
-
       {
             path: '/detail/:id',
             element: <DetailPage />,
-            errorElement: <NotFoundPage />,
       },
-
-
-
       {
             path: '/about',
             element: <About />,
-            errorElement: <NotFoundPage />,
       },
 ]);
 

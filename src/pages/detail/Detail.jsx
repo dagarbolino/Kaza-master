@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
-
-import FetchDataDetail from '../../service/FetchData.jsx';
 import NavBar from '../../components/navBar/NavBar';
 import Footer from '../../components/footer/Footer';
 import TitleDetail from '../../components/detail/title/TitleDetail';
@@ -11,25 +9,22 @@ import TagRate from '../../components/detail/tagRate/TagRate';
 import BlockCollapse from '../../components/detail/blockCollapse/BlockCollapse';
 import NotFoundPage from '../error/NotFoundPage.jsx';
 
-function DetailPage() {
-  const [data, setData] = useState(null);
-  const { id } = useParams();
+import { FetchData } from '../../service/FetchData';
+console.log(FetchData)
 
+
+function DetailPage() {
+
+  const { id } = useParams();
+  const data = FetchData().find((item) => item.id === id);
+  console.log(data)
   if (!data) {
-    return (
-      <FetchDataDetail render={(fetchedData) => {
-        const item = fetchedData.find((item) => item.id === id);
-        if (!item) {
-          return <NotFoundPage />;
-        }
-        setData(item);
-        return <div>Chargement en cours...</div>;
-      }} />
-    );
+    return <NotFoundPage />;
   }
 
   return (
     <>
+
       <NavBar />
       <div className="detailMain">
         <Carrousel data={data} />
@@ -42,8 +37,11 @@ function DetailPage() {
         <BlockCollapse data={data} />
       </div>
       <Footer />
+
     </>
   );
+
+
 }
 
 export default DetailPage;

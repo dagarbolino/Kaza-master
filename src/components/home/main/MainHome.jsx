@@ -1,38 +1,32 @@
 import React, { createContext } from 'react';
+
 import { Link } from 'react-router-dom';
 import Card from "../../../utils/card/Card.jsx";
-import FetchData from '../../../service/FetchData.jsx';
+
+import { FetchData } from '../../../service/FetchData';
 
 
 
 export const DataContext = createContext();
 
+export default function MainHome() {
+      const data = FetchData();
 
-class Main extends React.Component {
-      render() {
-            return (
+      return (
+            <DataContext.Provider value={data}>
+
                   <div className="mainHome">
-                        <FetchData render={(data) => (
-                              
-                              <DataContext.Provider value={data}>
-                                    {data.map((item) => (
-                                          <Link key={item.id} to={`/detail/${item.id}`}>
-                                                <Card
-                                                      title={item.title}
-                                                      imageUrl={item.cover}
-                                                      description={item.description}
-                                                />
-                                          </Link>
-                                    ))}
-                              </DataContext.Provider>
-                        )} />
+                        {data.map((item) => (
+                              <Link key={item.id} to={`/detail/${item.id}`}>
+                                    <Card
+                                          title={item.title}
+                                          imageUrl={item.cover}
+                                          description={item.description}
+                                    />
+                              </Link>
+                        ))}
                   </div>
-            );
-      }
+                  
+            </DataContext.Provider>
+      );
 }
-
-
-
-export default Main;
-
-
