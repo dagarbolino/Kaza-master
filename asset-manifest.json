@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Kaza-master/static/css/main.a93b42dd.css",
+    "main.js": "/Kaza-master/static/js/main.5cabb5f6.js",
+    "static/media/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png": "/Kaza-master/static/media/kalen-emsley-Bkci_8qcdvQ-unsplash 2.de7cc9c4b8033e1ee8ef.png",
+    "static/media/banner1.png": "/Kaza-master/static/media/banner1.d9ae6f70a04b5e1258c3.png",
+    "index.html": "/Kaza-master/index.html",
+    "main.a93b42dd.css.map": "/Kaza-master/static/css/main.a93b42dd.css.map",
+    "main.5cabb5f6.js.map": "/Kaza-master/static/js/main.5cabb5f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a93b42dd.css",
+    "static/js/main.5cabb5f6.js"
+  ]
+}
