@@ -7,10 +7,10 @@ export function FetchData() {
 
   useEffect(() => {
     fetch(baseUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
+      .then((response) => response.json()) 
+      .then((data) => { 
+        // console.log(data);
+        setData(data); //nous set les data dans le state
       });
   }, []);
 

@@ -15,7 +15,7 @@ const MainNavigation = () => {
                                           </div>
 
                                           <div className="__menu">
-                                                <NavLink  to="/" exact="true" className="__acceuil" activeclassname="__active">
+                                                <NavLink to="/" exact="true" className="__acceuil" activeclassname="__active">
                                                       Accueil
                                                 </NavLink>
                                                 <NavLink to="/about" className="__propos" activeclassname="__active">

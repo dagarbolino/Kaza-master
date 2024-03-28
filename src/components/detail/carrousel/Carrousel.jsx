@@ -13,7 +13,7 @@ function Carrousel({ data }) {
   const images = data.pictures;
 
   const nextImage = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    setCurrentImage((prevImage) => (prevImage + 1) % images.length); 
   };
 
 

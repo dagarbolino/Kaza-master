@@ -10,14 +10,14 @@ import BlockCollapse from '../../components/detail/blockCollapse/BlockCollapse';
 import NotFoundPage from '../error/NotFoundPage.jsx';
 
 import { FetchData } from '../../service/FetchData';
-console.log(FetchData)
+
 
 
 function DetailPage() {
 
   const { id } = useParams();
   const data = FetchData().find((item) => item.id === id);
-  console.log(data)
+
   if (!data) {
     return <NotFoundPage />;
   }
