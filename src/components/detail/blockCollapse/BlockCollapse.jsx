@@ -24,7 +24,7 @@ function BlockCollapse({ data }) {
                 </div>
             </div>
 
-      
+
     );
 }
 

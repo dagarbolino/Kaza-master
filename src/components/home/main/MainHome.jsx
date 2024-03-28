@@ -21,7 +21,6 @@ export default function MainHome() {
                                     <Card
                                           title={item.title}
                                           imageUrl={item.cover}
-                                          description={item.description}
                                     />
                               </Link>
                         ))}
